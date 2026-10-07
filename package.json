@@ -1,0 +1,23 @@
+{
+  "name": "osc-codec-lab",
+  "version": "1.0.0",
+  "description": "离线 Open Sound Control 消息与嵌套 bundle 编解码核验后端（仅 API 与 CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "bin": {
+    "osc-lab": "dist/cli/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.test.json",
+    "test": "npm run build && node --test \"dist-test/test/*.js\"",
+    "start": "node dist/server/server.js",
+    "dev": "node --experimental-strip-types src/server/server.ts",
+    "demo": "npm run build && node dist/demo/demo.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.10.0"
+  }
+}
