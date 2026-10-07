@@ -1,0 +1,21 @@
+{
+  "name": "osc-codec-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OSC 消息与嵌套 bundle 离线二进制编解码核验后端",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/*.test.js\"",
+    "start": "node dist/src/server.js",
+    "cli": "node dist/src/cli.js",
+    "demo": "node dist/src/cli.js demo"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.5.0"
+  }
+}
